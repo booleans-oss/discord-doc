@@ -51,6 +51,15 @@ Install using [npm](https://docs.npmjs.com/getting-started/what-is-npm):
 
 or using [yarn](https://yarnpkg.com);
 
+### 3. Starting the project
+Using internal implemented script
+
+    npm run start
+
+or using [node](https://nodejs.com);
+
+    node src/index.js
+
 
 ### 4. Enjoy :smile:
 
