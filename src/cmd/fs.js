@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
       let url = object.textRaw.toLowerCase()
       if (name.includes(args[0].toLowerCase())) {
         url = url.replace(/[^A-Za-z0-9]/g, "_");
-        url = url.replace(/([_]+)/g, "_").slice(0, -1)
+        url = url.replace(/([_]+)/g, "_").slice(0, -1);
         description += `**[fs.${object.name}()](https://nodejs.org/api/fs.html#fs${url})** \n \`\`\`js\n${object.textRaw.slice(1, -1)}\`\`\` \n`
       }
     })
