@@ -5,7 +5,7 @@ const client = new Discord.Client();
 require("./util/eventHandler")(client)
 client.commands = new Discord.Collection();
 
-client.login(config.token);
+client.login(token);
 
 fs.readdir("./cmd/", (err, files) => {
     if(err) console.log(err);
@@ -33,4 +33,3 @@ client.on("message", async message => {
     }
 
 });
-client.login(TOKEN)
