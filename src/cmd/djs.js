@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
 
     if (!args[1]) {
       const doc = await Doc.fetch('stable');
-         let data = doc.resolveEmbed(args[0])
+         let data = doc.resolveEmbed(args[0]);
         let categorie = false;
         if ('fields' in data) {
           categorie = true;
