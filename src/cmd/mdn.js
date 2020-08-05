@@ -36,7 +36,7 @@ module.exports.run = async (client, message, args) => {
 
         })
         tr = tr.replace("en-US", "fr")
-        message.channel.send(tr)
+        message.channel.send(tr);
       })
       .catch((err) => {
         message.channel.send("*Argh*, l'argument n'a pas été trouvé.")
