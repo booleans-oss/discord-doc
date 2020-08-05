@@ -68,7 +68,7 @@ module.exports.run = async (client, message, args) => {
               value = "";
             })
             message.channel.send(discordjs).then(rea => {
-                rea.react("712285915942486088").then(() => {
+                rea.react("❌").then(() => {
                   reaction(message, rea);
                 })
               })
@@ -113,7 +113,7 @@ module.exports.run = async (client, message, args) => {
           embed.addField("\u200b", o_embed, true);
         }
         message.channel.send(embed).then(rea => {
-          rea.react("712285915942486088").then(() => {
+          rea.react("❌").then(() => {
             reaction(message, rea);
           })
         })
@@ -145,7 +145,7 @@ module.exports.run = async (client, message, args) => {
             }
           })
           message.channel.send(msg).then(rea => {
-            rea.react("712285915942486088").then(() => {
+            rea.react("❌").then(() => {
               reaction(message, rea);
             })
           })
@@ -155,13 +155,12 @@ module.exports.run = async (client, message, args) => {
     }
 
     async function reaction(message, msg) {
-      const reactionFilter = (reaction, user) => ["712285915942486088"].includes(reaction.emoji.id) && !user.bot && user.id === message.author.id;
+      const reactionFilter = (reaction, user) => ["❌"].includes(reaction.emoji.name) && !user.bot && user.id === message.author.id;
       const reactions = await msg.awaitReactions(reactionFilter, {
         max: 1,
         time: 172800000
       });
-      const choice = reactions.get("712285915942486088");
-      if (choice.emoji.id === "712285915942486088") {
+      if (choice.emoji.name === "❌") {
         msg.delete();
       }
     }
