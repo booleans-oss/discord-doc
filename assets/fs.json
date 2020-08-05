@@ -1,7 +1,7 @@
 {
     "type": "module",
     "source": "doc/api/fs.md",
-    "modules": [
+    "modules":[
       {
         "textRaw": "File System",
         "name": "fs",
