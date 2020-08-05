@@ -1,5 +1,4 @@
 const reqEvent = (event) => require(`../event/${event}`)
- 
 module.exports = client => {
     client.on("ready", function() {reqEvent("ready") (client)});
     client.on("reconnecting", () => reqEvent("reconnecting") (client))
