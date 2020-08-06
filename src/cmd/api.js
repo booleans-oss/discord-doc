@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const axios = require('axios');
-const categories = require('../../assets/api_cat.json')
+const categories = require('../../assets/api_cat.json');
 
 module.exports.run = async (client, message, args) => {
     if(args[0] === "categorie" && !args[1]) {
