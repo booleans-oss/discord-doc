@@ -29,6 +29,7 @@
   - [x] ~~MDN link documentation~~
   - [x] ~~Reactions system~~
   - [x] ~~fs storage minimized~~
+  - [x] ~~npm search command~~
   - [ ] more optimization
   - [ ] error handling
 
