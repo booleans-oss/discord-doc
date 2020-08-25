@@ -1,0 +1,201 @@
+{
+  "djs": [{
+      "alias": ["activity", "act", "jeu", "game", "presence"],
+      "titre": "Discord Bot Statut",
+      "embed_structure": {
+        "color": 16119285,
+        "author": {
+          "name": "Discordjs",
+          "url": "https://discord.js.org/#/docs/main/stable"
+        },
+        "title": "Bot Statut",
+        "description": "[Discord.js API](https://discord.js.org/#/) propose la possibilité de pouvoir changer le statut de son bot. Cette méthode sert d'une racine pour diverses utilisations (e.g. statut avec le nombre de membres, statut qui change, etc..).",
+        "fields": [{
+            "name": "MÉTHODES & PROPRIÉTÉS",
+            "value": "``|`` [Client#user](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=user) (``≠Client.users``) - Le principal centre d'interaction avec l'API Discord, et le point de départ de tout bot. \n ``|`` [?ClientUser](https://discord.js.org/#/docs/main/stable/class/ClientUser) - Représente l'utilisateur Discord du client connecté. \n ``|`` [#setPresence](https://discord.js.org/#/docs/main/stable/class/ClientUser?scrollTo=setPresence) - Modification de la présence (jeu) du Client \n ``|`` [?PresenceData](https://discord.js.org/#/docs/main/stable/typedef/PresenceData) - Données de la présence brute du Client."
+          },
+          {
+            "name": "CODE ET EXPLICATIONS",
+            "value": "```js\nClient.user.setPresence({activity: {'name': 'Je surveille', 'type': 'WATCHING'}, status: 'idle'})``` \n *(n.b. Ce code n'est qu'un exemple)*"
+          },
+          {
+            "name": "\u200b",
+            "value": "**PresenceData**: \n \t __Status__: Le [status](https://discord.js.org/#/docs/main/stable/typedef/PresenceStatusData) (``online`` - vert; ``idle`` - jaune; ``invisible`` - ``invisible``; ``dnd`` - rouge) \n \t __Activity.name__: Le nom du jeu, de l'activité. \n \t __Activity.type__: Le [type](https://discord.js.org/#/docs/main/stable/typedef/ActivityType) d'activité (``WATCHING`` - regarde; ``PLAYING`` - joue; ``LISTENING`` - écoute; ``STREAMING`` - diffuse; ``CUSTOM_STATUS`` - uniquement pour les membres; \n \t __Activity.url__: Lien du live"
+          },
+          {
+            "name": "\u200b",
+            "value": "\u200b"
+          },
+          {
+            "name": "APPROFONDISSEMENTS",
+            "value": "__Status avec le nombre de serveurs et de channels__ \n ```js\nClient.user.setPresence({activity: {`Surveille ${Client.guilds.cache.size} serveurs, ${Client.channels.cache.size} channels et ${Client.users.cache.size} membres`, 'type': 'WATCHING'}, status: 'idle'})``` \n ``|`` [Client#guilds](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guilds) - Tout les serveurs où le bot se trouve. \n ``|`` [Client#channels](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=channels) - Tout les channels où le bot se trouve. \n ``|`` [Client#users](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=users) - Tout les utilisateurs qui se trouvent dans le cache du bot. \n "
+          },
+          {
+            "name": "\u200b",
+            "value": "__Status aléatoire qui change__\n ```js\nlet status = [\"Status 1\", \"Status 2\", \"Status 3\", \"Status 4\"] \n .setInterval(function() { \n let nombre = Math.floor(Math.random() * status.length) \n Client.user.setPresence({activity: {`${status[nombre]}`, 'type': 'WATCHING'}, status: 'idle'}) \n }, 5000)``` \n ``|`` [Math.floor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) - Retourne l'entier le plus proche du nombre donné. \n ``|`` [Math.random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) - Donne un nombre entre 0 et la valeur indiquée.  \n ``|`` [Array.length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length) - Retourne le nombre d'éléments présents dans la liste. \n "
+          }
+        ]
+      }
+    },
+    {
+      "alias": ["string", "str", "strings", "texte", "text"],
+      "titre": "Javascript ES2015+",
+      "embed_structure": {
+        "color": 16119285,
+        "author": {
+          "name": "Javascript Cheatsheet",
+          "url": "https://devhints.io/"
+        },
+        "title": "Strings",
+        "description": "L'objet global ***String*** est un constructeur de chaînes de caractères.",
+        "fields": [{
+            "name": "TYPE DE STRING",
+            "value": "```js\n'Ceci est un texte'``` Avec cette utilisation, l'ajout de variables devra se faire séparément avec l'opérateur ``+``. ```js\nvar texte = ', comment ça va?' \n console.log('Bonjour' + texte) \n //Bonjour, comment ça va ?``` \n \n```js\n`Ceci est un texte` ``` Avec ce type de string, il est possible de rajouter des variables à l'intérieur, appelée: ``Indentation``. e.g. ```js\nvar texte = ', comment ça va?' \n console.log(`Bonjour${texte}`) \n //Bonjour, comment ça va ?```"
+          },
+          {
+            "name": "MÉTHODES SUR STRING",
+            "value": "Grâce à la nouvelle mise-à-jour ES2015 *(ECMAScript 2015)*, il existe différentes [méthodes](https://developer.mozilla.org/fr/docs/Glossary/Method) applicables sur des Strings ```js\n'bonjour'.repeat(3) //'bonjourbonjourbonjour' \n 'bonjour'.includes('on') //true \n 'bonjour'.startsWith('bon') //true \n 'bonjour'.padStart(10) //'   bonjour' \n 'bonjour'.padEnd(10) //'bonjour   '\n 'bonjour'.padEnd(10, '!') //'bonjour!!!'```"
+          },
+          {
+            "name": "\u200b",
+            "value": "``|`` [String.prototype.repeat(nombre)](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/repeat) : Répète le texte **String**, le nombre de fois donné. \n ``|`` [String.prototype.includes(string)](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/includes): Vérifie si le texte **String** contient le paramètre donné. \n ``|`` [String.prototype.startsWith(string)](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/startsWith): Vérifie si le texte **String** commence par le paramètre indiqué. \n ``|`` [String.prototype.padStart(<nombre>,  string)](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/padStart): Complète le début du texte **String** pour attendre le nombre de caractère fourni. \n ``|`` [String.prototype.padStart(<nombre>,  string)](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/padStart): Pareil que padEnd mais à la fin."
+          },
+          {
+            "name": "\u200b",
+            "value": "[Lien source](https://github.com/rstacruz/cheatsheets/blob/master/es6.md#new-string-methods) || [Source](https://devhints.io/es6)"
+          }
+        ]
+      }
+    },
+    {
+      "alias": ["const", "let", "var", "variable", "variables"],
+      "titre": "Javascript ES2015+",
+      "embed_structure": {
+        "color": 16119285,
+        "author": {
+          "name": "Javascript Cheatsheet",
+          "url": "https://devhints.io/"
+        },
+        "title": "Const / Let / Var",
+        "description": "ES6 (aussi appelé ES2015) vous apporte de nouvelles façons de déclarer vos [variables](https://developer.mozilla.org/fr/docs/Glossaire/Variable) grâce à ***let*** et ***const*** mais garde aussi la déclaration par *__var__* dans la spécification du langage.",
+        "fields": [{
+            "name": "CONST",
+            "value": "``const`` permet de définir une variable dans un bloc. Cependant, **const** ne pourra pas être redéfinie. Une fois la variable assignée, il est impossible de la changer, d'où le nom *const* pour __constante__. ```js\nconst texte = 'Bonjour tout le monde'; \n texte = 'Comment ça va ?' // SyntaxError, la variable ne peut pas être réassignée.``` ``const`` est une variable qui est **scopée au bloc**: si vous déclarez const en dehors d'une boucle, elle pourra être encore définie. ```js\nconst texte = 'Bonjour, tout le monde.' \n if(true) {\n const texte = 'Comment allez-vous ?' //Aucune erreur de syntaxe \n }```"
+          },
+          {
+            "name": "\u200b",
+            "value": "\u200b"
+          },
+          {
+            "name": "LET",
+            "value": "``let`` est en majeur partie semblabe à *const* de part le fait qu'ils sont tout deux scopés au bloc. Cependant, *let* peut être redéfini, à contrario de *const* qui ne le peut pas. ```js\nlet texte = 'Bonjour tout le monde'; \n texte = 'Comment ça va ?' // Aucune erreur``` Étant donné que ``let`` est scopé à la boucle, tout assignement ou création de variables *let* dans une boucle ou fonction, sera uniquement disponible dans cette même boucle ou fonction.```js\nlet texte = 'Bonjour' \n if(true) {\n let texte = 'Comment allez-vous ?' //Aucune erreur de syntaxe \n console.log(texte) //'Comment allez-vous ?' \n \t } \n console.log(texte) //'Bonjour'```"
+          },
+          {
+            "name": "\u200b",
+            "value": "\u200b"
+          },
+          {
+            "name": "VAR",
+            "value": "``var`` est identique à ``let`` qui peuvent tout les deux être re-assignés. Mais, *var* est différent de *let*. ```js\nvar texte = 'Bonjour tout le monde'; \n texte = 'Comment ça va ?' // Aucune erreur``` En contraste avec *let*, **var** est scopée globalement. Cela veut dire que tout changement ou création de variables *var* affectera le script en entier.```js\nvar texte = 'Bonjour' \n if(true) {\n texte = 'Comment allez-vous ?' //Aucune erreur de syntaxe \n console.log(texte) //'Comment allez-vous ?' \n \t } \n console.log(texte) //'Comment allez-vous ?'```"
+          },
+          {
+            "name": "\u200b",
+            "value": "\u200b"
+          },
+          {
+            "name": "INFORMATIONS <:fail:712287744168296528>",
+            "value": "**let** est souvent dit comme le nouveau *var*. Il est vrai que depuis l'arrivée de *let*, *var* a perdu son utilité. **Cependant, var est toujours utilisable, juste moins utilisé.**"
+          },
+          {
+            "name": "\u200b",
+            "value": "[Lien source](https://github.com/rstacruz/cheatsheets/blob/master/es6.md#block-scoping) || [Source](https://devhints.io/es6)"
+          }
+        ]
+      }
+    },
+    {
+      "alias": ["fonction", "function", "fonctions", "functions", "fnctn"],
+      "titre": "Javascript ES2015+",
+      "embed_structure": {
+        "color": 16119285,
+        "author": {
+          "name": "Javascript Cheatsheet",
+          "url": "https://devhints.io/"
+        },
+        "title": "Fonctions",
+        "description": "Les fonctions sont des bout de codes qui vont s'activer lorsqu'on le demande. Il y a les fonctions *externes* et les fonctions *internes* (ou *flèche*). \n Les fonctions peuvent être utiles pour aérer un bloc de code ou tout simplement pour retourner une valeur séparémment.",
+        "fields": [{
+            "name": "\u200b",
+            "value": "```LES FONCTIONS EXTERNES```"
+          },
+          {
+            "name": "DÉCLARER UNE FONCTION",
+            "value": "Avant de pouvoir déclarer une fonction, comme les variables, la fonction doit être défini, en utilisant ``function``. ```js\nfunction envoyer_message(message, texte) {\nmessage.channel.send(texte)\n\t}``` Les paramètres entre parenthèses ``message`` et ``texte`` sont les variables que l'on souhaite utiliser, mais qui ont été utilisé en-dehors de la fonction. \n Dans ce cas de figure, la fonction envoie un message. Mais les fonctions peuvent faire beaucoup de choses, comme des maths. ```js\nfunction math(3, 2) {\n  return 3*2 \n\t} ```"
+          },
+          {
+            "name": "EXCÉCUTER UNE FONCTION",
+            "value": "Après avoir déclaré la fonction, il faut l'excécuter -*l'appeler. Pour cela, il faut simplement utiliser, le nom de la variable, et y insérer les paramètres (variables) qui sont nécessaires. ```js\nlet texte = \"J'ai \"; \n let nombre = 6; \n age(texte, nombre) \n \n function age(valeur1, valeur2) {\n //valeur1 = \"J'ai \" \n valeur2 = 6 \n return valeur1 + ' ' + ${valeur2} + ' ans' \n \t}``` **L'ordre des paramètres donnés sont importants, mais leur nom n'est que cosmétique, libre à vous de les nommer.**"
+          },
+          {
+            "name": "\u200b",
+            "value": "```LES FONCTIONS INTERNES```"
+          },
+          {
+            "name": "DÉCLARER UNE FONCTION",
+            "value": "Contrairement aux fonctions externes, la déclaration et l'excécution des fonctions internes se font à l'intérieur d'un même bloc. ```js\nconst nombre = ['1', '2', '3', '4', '5']\n nombre.map(n => ({\n return n*2 \n \t })``` Dans le cas ci-montré, la fonction sert à prendre les chiffres d'une liste et à les multiplier par 2 pour faire une nouvelle liste. \n On peut voir la flèche ``=>`` est qui significative des fonctions internes. Elle représente le fait que pour **chaque valeur de la liste**, le code sera excécuté. ```js\nreadFile('points.json', (err, data) => console.log(data))``` Si une fonction n'excécute qu'une seule action (return en une seule ligne), il est inutile d'utiliser les ``{}``. Cependant, dans le cas d'au-dessus, on a défini **err** qui peut être le message d'erreur, s'il y a une erreur. Il est important de ne pas l'oublier. **Les fonctions peuvent souvent être raccourcies**."
+          },
+          {
+            "name": "\u200b",
+            "value": "Il y a de nombreux types de fonction internes, faciles et intuitifs. En-voici une liste exhaustive: \n [Array.prototype.map()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map): sert tout simplement à créer une nouvelle liste à partir d'une liste déjà existante. \n [Array.prototype.forEach()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/forEach): Excécute la fonction pour chaque valeur de la liste. \n [for..in](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/for...in): Permet d'excécuter une fonction pour chaque valeur d'un objet avec leurs index. \n [for..of](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/for...of): Permet d'excécuter une fonction pour chaque valeur d'un objet grâce à leur valeur."
+          },
+          {
+            "name": "\u200b",
+            "value": "[Lien source](https://github.com/rstacruz/cheatsheets/blob/master/es6.md#functions) || [Source](https://devhints.io/es6)"
+          }
+        ]
+      }
+    }
+
+  ],
+  "errors": [{
+    "alias": ["err undefined"],
+    "titre": "Erreur: undefined",
+    "embed_structure": {
+      "color": 16119285,
+      "author": {
+        "name": "Nodejs",
+        "url": "http://nodejs.org"
+      },
+      "title": "ReferenceError : is not defined",
+      "description": "L'une des erreurs les plus connues de [Nodejs](http://nodejs.org) est ``undefined``. Pour les habitués en anglais, ``undefined`` veut dire **indéfini**. C'est peut-être anodin, mais dans un contexte complexe, cette erreur peut devenir assez compliqué.",
+      "fields": [{
+          "name": "__{var} is not defined__",
+          "value": "C'est l'erreur la plus simple des deux. ``{var} is not defined`` C'est tout simplement que la variable appelée n'a pas été définie. \n ```js\nlet data = 'Bonjour'\nconsole.log(Data) // ReferenceError: Data is not defined``` Pour résoudre cette erreur, il faut à premier lieu vérifier l'orthographe de la variable. Dans le cas si-dessus, il y a un D majuscule, donc **Data** n'est pas défini. Dans certains cas, il faudra simplement définir la variable. \n\n```js\nconsole.log(data) //ReferenceError: data is not defined\nlet data = 'Salut'``` Dans ce cas-ci, il faut simplement placer la définition de la variable au-dessus de l'action. __La hiérarchie en JS a beaucoup d'importance__. Une variable définie après avoir été appelée est une erreur (*comme le cas ci-dessus*)."
+        }
+      ]
+    }
+  },
+  {
+    "alias": ["err of undefined"],
+    "titre": "Erreur: undefined",
+    "embed_structure": {
+      "color": 16119285,
+      "author": {
+        "name": "Nodejs",
+        "url": "http://nodejs.org"
+      },
+      "title": "Uncaught TypeError: Cannot read property '{var}' of undefined",
+      "description": "L'une des erreurs les plus connues de [Nodejs](http://nodejs.org) est ``undefined``. Pour les habitués en anglais, ``undefined`` veut dire **indéfini**. C'est peut-être anodin, mais dans un contexte complexe, cette erreur peut devenir assez compliqué.",
+      "fields": [
+        {
+          "name": "__Cannot read property '{var}' of undefined__",
+          "value": "Cette arrive moins souvent mais elle est quand même ***énervante***. Cette erreur intervient lorsque vous essayez d'utiliser la propriété d'un élément indéfini. Globalement, l'élément juste avant est indéfini (``is not defined``). ```js\nlet member = message.mentions.members.first() //Dans cette exemple, il n'y aura pas de mentions dans le message. \n console.log(member.id) //Uncaught TypeError: Cannot read property 'id' of undefined``` Pour résoudre ce problème, il faut bien vérifie que l'élément parent (__l'élément avant <args>__) est défini. Si cette erreur survient, c'est que l'élément parent ne l'est pas. \n Cette erreur n'a pas vraiment de *'correction'* logique comme l'erreur précédente, juste des vérifications. \n\n```js\nlet member = message.mentions.members.first()\nif(!member) return``` Avec ce code-là, on n'aura plus d'erreur."
+        }
+      ]
+    }
+  }
+]
+}
+
+
+
