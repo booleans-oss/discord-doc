@@ -8,7 +8,7 @@
 
 </div>
 
-**This is README for `1.0` version of this bot (@discord.js based).**
+**This is README for `2.0.0` version of this bot (@discord.js based).**
 
 
 [<img alt="Deploy to Github" src="http://i.imgur.com/YZmaqk3.png" height="60px">](https://github.com/booleans-oss/discord-doc/) [<img alt="Customization services" src="http://i.imgur.com/c4sUF7M.png" height="60px">](https://github.com/booleans-oss/discord-doc/)
