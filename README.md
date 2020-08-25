@@ -30,7 +30,7 @@
   - [x] ~~Reactions system~~
   - [x] ~~fs storage minimized~~
   - [x] ~~npm search command~~
-  - [ ] more optimization
+  - [X] ~~more optimization
   - [ ] error handling
 
 ## Releases 🔴
