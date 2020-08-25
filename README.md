@@ -34,8 +34,8 @@
   - [ ] error handling
 
 ## Releases 🔴
-**Important:** this version 1.x.x is the first version. As time goes by, further releases would be done. Branches would be created to separate the releases:
-- 1.0.x, e.g. `v1.0.2-beta.15`: https://github.com/booleans-oss/discord-doc/ 
+**Important:** this version 2.x.x is the first version. As time goes by, further releases would be done. Branches would be created to separate the releases:
+- 2.0.x, e.g. `v1.0.2-beta.15`: https://github.com/booleans-oss/discord-doc/ 
 - `next` release: https://github.com/booleans-oss/discord-doc/
 
 ## Deployment 🌱
