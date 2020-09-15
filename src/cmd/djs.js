@@ -9,7 +9,7 @@ module.exports = class TestingCommand extends BaseCommand {
   }
 
   async run(client, message, args) {
-    if (!args[0]) return message.channel.send("Utilisation: ``&djs <recherce>``")
+    if (!args[0]) return message.channel.send("Utilisation: ``&djs <recherche>``")
     if (args[0].startsWith("Collection")) {
       const doc = await Doc.fetch('collection');
       let data = doc.resolveEmbed(args[0]);
