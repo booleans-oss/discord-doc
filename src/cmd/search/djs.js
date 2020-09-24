@@ -58,7 +58,6 @@ module.exports = class DJSCommand extends BaseCommand {
         return message.channel.send("Aucun élément de la documentation ``@discord.js`` ne correspond à votre requête ou à ses similitudes.")
       }
       if(args[1] === "-l") {
-        if(data.fields) return message.channel.send(`Ceci est une requête exacte. \`\`&djs ${args[0]}\`\``);
         data.author = {
           name: `[${args[0]}]`,
           icon_url: `${client.user.avatarURL()}`
