@@ -3,7 +3,6 @@ const BaseEvent = require('./EventBase');
 const BaseCommand = require('./BaseCommand')
 const fs = require("fs").promises
 const path = require("path");
-const { setupMaster } = require("cluster");
 class Bot extends Client {
     constructor(options) {
         super(options);
@@ -13,7 +12,7 @@ class Bot extends Client {
         this._setup()
     }
     async _setup() {
-      await this.login("MzM1MDUwNzAzOTA5Mjg5OTg3.WWd2SA.zXBy0sOMgf4oaxS9FDq2opH1bOA");
+      await this.login(process.env.TOKEN_BOT);
       await this._chargementEvent(path.join(__dirname, '../events/'));
       await this._chargementCommand(path.join(__dirname, "../cmd/"));
     }
