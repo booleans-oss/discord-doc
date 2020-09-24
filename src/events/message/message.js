@@ -1,7 +1,8 @@
-module.exports = class {
-    constructor (client) {
-        this.client = client;
-        this.name = "message"
+const EventBase = require('../../util/EventBase');
+
+module.exports = class MessageEvent extends EventBase {
+    constructor() {
+        super('message');
     }
     async run (client, message) {
         if (message.author.bot) return;

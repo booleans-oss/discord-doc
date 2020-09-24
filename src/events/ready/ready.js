@@ -1,7 +1,8 @@
-module.exports = class {
-    constructor(client) {
-        this.client = client;
-        this.name = "ready"
+const EventBase = require('../../util/EventBase');
+
+module.exports = class ReadyEvent extends EventBase {
+    constructor() {
+        super('ready');
     }
     async run(client) {
         console.log(`[CONNECTED] ${client.user.tag}`);
