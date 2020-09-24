@@ -1,8 +1,8 @@
-const BaseCommand = require('../../utils/structures/BaseCommand');
-const mistakes = require('../../assets/mistakes.json');
+const BaseCommand = require('../../util/BaseCommand');
+const mistakes = require('../../../assets/mistakes.json');
 module.exports = class LibCommand extends BaseCommand {
   constructor() {
-    super('lib', 'lib', []);
+    super('test', 'testing', []);
   }
 
   async run(client, message, args) {

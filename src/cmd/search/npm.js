@@ -1,11 +1,11 @@
-const BaseCommand = require('../../utils/structures/BaseCommand');
+const BaseCommand = require('../../util/BaseCommand');
 const Discord = require("discord.js");
 const axios = require('axios');
 const moment = require('moment')
-module.exports = class TestingCommand extends BaseCommand {
+module.exports = class NPMCommand extends BaseCommand {
   constructor() {
-    super('npm', 'lib', []);
-  }
+    super('npm', 'search', []);
+}
 
   async run(client, message, args) {
     if(args[0] === "search") {
@@ -26,7 +26,7 @@ module.exports = class TestingCommand extends BaseCommand {
             if(pack.score.final*100 >= 0 && pack.score.final*100<25) note = "⚫";
             embed.addField(`\`\`\`${pack.package.name}\`\`\``, `\n **${pack.package.description}**\n __Overall__: \\${note} *(\`\`${Math.floor(pack.score.final*100)}/100\`\`)* \n  > *version*: ${pack.package.version}\n>  [<:npm:741639566993260674>](${pack.package.links.npm})  \t \t [<:github:741639401884483585>](${pack.package.links.homepage})` , true)
         })
-        message.channel.send(embed).catch(err => {
+        message.channel.send(embed).catch(() => {
             message.channel.send("La liste de module est trop longue.")
         })
     } else {

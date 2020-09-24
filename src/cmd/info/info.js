@@ -1,8 +1,8 @@
-const BaseCommand = require('../../utils/structures/BaseCommand');
+const BaseCommand = require('../../util/BaseCommand');
 const Discord = require("discord.js");
-module.exports = class TestingCommand extends BaseCommand {
+module.exports = class InfoCommand extends BaseCommand {
   constructor() {
-    super('info', 'lib', []);
+    super('info', 'search', []);
   }
 
   async run(client, message, args) {
