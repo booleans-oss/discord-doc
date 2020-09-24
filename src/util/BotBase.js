@@ -12,7 +12,7 @@ class Bot extends Client {
         this._setup()
     }
     async _setup() {
-      await this.login("MzM1MDUwNzAzOTA5Mjg5OTg3.WWd2SA.zXBy0sOMgf4oaxS9FDq2opH1bOA");
+      await this.login(process.env.TOKEN_BOT);
       await this._chargementEvent(path.join(__dirname, '../events/'));
       await this._chargementCommand(path.join(__dirname, "../cmd/"));
     }
