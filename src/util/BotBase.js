@@ -3,7 +3,6 @@ const BaseEvent = require('./EventBase');
 const BaseCommand = require('./BaseCommand')
 const fs = require("fs").promises
 const path = require("path");
-const { setupMaster } = require("cluster");
 class Bot extends Client {
     constructor(options) {
         super(options);
