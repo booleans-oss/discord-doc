@@ -32,7 +32,7 @@ module.exports = class MDNCommand extends BaseCommand {
         let argument = args.join(" ");
         var re = new RegExp(" ", "g");
         argument = (argument.replace(re, "%20"));
-        let data = axios(`https://duckduckgo.com/?q=%21%20site%3Adeveloper.mozilla.org%20${argument}`).then((data) => {
+        axios(`https://duckduckgo.com/?q=%21%20site%3Adeveloper.mozilla.org%20${argument}`).then((data) => {
             let url = data.data.match(/(replace\()(.*?)(?=\s*;)/gi);
             var tr = url[0].slice(18, -2);
             characters.forEach((value) => {
