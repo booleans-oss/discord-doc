@@ -8,7 +8,7 @@
 
 </div>
 
-**This is README for `2.5.0-beta` version of this bot (@discord.js based).**
+**This is README for `3.0.0` version of this bot (@discord.js based).**
 
 
 [<img alt="Deploy to Github" src="http://i.imgur.com/YZmaqk3.png" height="60px">](https://github.com/booleans-oss/discord-doc/) [<img alt="Customization services" src="http://i.imgur.com/c4sUF7M.png" height="60px">](https://github.com/booleans-oss/discord-doc/)
@@ -34,11 +34,11 @@
   - [ ] error handling
 
 ## Releases 🔴
-**Important:** this version 2.5.0-beta is the third and first alpha version. As time goes by, further releases would be done. Branches would be created to separate the releases:
+**Important:** this version 3.0.0 is the third and first alpha version. As time goes by, further releases would be done. Branches would be created to separate the releases:
 - releases: https://github.com/booleans-oss/discord-doc/releases
 
-- 2.0.x, e.g. `v2.0.0-beta.15`: https://github.com/booleans-oss/discord-doc/releases/tag/2.0.0
-- `next` release: https://github.com/booleans-oss/discord-doc/releases/tag/2.0.0/next
+- 2.0.x, e.g. `3.0.0`: https://github.com/booleans-oss/discord-doc/releases/tag/3.0.0
+- `next` release: https://github.com/booleans-oss/discord-doc/releases/tag/3.0.0/next
 
 ## Deployment 🌱
 
