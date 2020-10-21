@@ -1,5 +1,6 @@
 const { Client } = require("discord.js");
 const BaseEvent = require('./EventBase');
+require('dotenv').config()
 const BaseCommand = require('./BaseCommand')
 const fs = require("fs").promises
 const path = require("path");
