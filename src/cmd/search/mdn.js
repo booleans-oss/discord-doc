@@ -32,6 +32,7 @@ module.exports = class MDNCommand extends BaseCommand {
         let argument = args.join(" ");
         var re = new RegExp(" ", "g");
         argument = (argument.replace(re, "%20"));
+        try {
         let data = await axios.get(`https://duckduckgo.com/?q=%21%20site%3Adeveloper.mozilla.org%20${argument}`)
             let url = data.data.match(/(replace\()(.*?)(?=\s*;)/gi);
             var tr = url[0].slice(18, -2);
@@ -42,8 +43,8 @@ module.exports = class MDNCommand extends BaseCommand {
             })
             tr = tr.replace("en-US", "fr")
             message.channel.send(tr);
-            .catch((err) => {
+        } catch(err) {
                 message.channel.send("*Argh*, l'argument n'a pas été trouvé.")
-            })
+            }
     }
 }
