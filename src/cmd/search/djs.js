@@ -7,7 +7,10 @@ module.exports = class DJSCommand extends BaseCommand {
   }
 
   async run(client, message, args) {
-    if (!args[0]) return message.channel.send("Utilisation: ``&djs <recherche>``")
+    if (!args[0]) return message.channel.send("Utilisation: ``&djs <recherche>``");
+    if(args[0].match(/[.]/).length > 1) {
+      args[0] = args[0].replace(/[.]/g, "#")
+    }
     if (args[0].startsWith("Collection")) {
       const doc = await Doc.fetch('collection');
       let data = doc.resolveEmbed(args[0]);
