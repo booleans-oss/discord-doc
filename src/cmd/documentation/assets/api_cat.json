@@ -1,0 +1,158 @@
+{
+    "APIs": [{
+          "aliases": ["animals", "chien", "chat", "poisson", "animaux", "animal", "chats", "chiens", "poissons", "renards", "renard"],
+          "name": "Animals"
+      },
+      {
+          "aliases": ["manga", "anime", "naruto", "anime", "one piece"],
+          "name": "Anime"
+      },
+      {
+          "aliases": ["anti-malware", "anti-malware", "anti malware", "protection", "malware", "ddos"],
+          "name": "Anti-Malware"
+      },
+      {
+          "aliases": ["design", "graphisme", "logo", "banniere", "bannière", "art"],
+          "name": "Art Design"
+      },
+      {
+          "aliases": ["books", "livres", "lecture", "littérature", "litterature", "lire", "roman", "romans", "bouquin", "bouquins"],
+          "name": "Books"
+      },
+      {
+          "aliases": ["business", "travail", "boss"],
+          "name": "Business"
+      },
+      {
+          "aliases": ["date", "vacance", "dates", "calendrier", "vacances", "jour", "jours", "mois", "années"],
+          "name": "Calendar"
+      },
+      {
+          "aliases": [],
+          "name": "Continuous Integration"
+      },
+      {
+          "aliases": ["monnaie", "currency", "argent"],
+          "name": "Currency"
+      },
+      {
+          "aliases": ["validation", "captcha", "vérification", "verification"],
+          "name": "Data Validation"
+      },
+      {
+          "aliases": ["dev", "developpement", "développement", "developement"],
+          "name": "Developement"
+      },
+      {
+          "aliases": ["dictionnaire", "dictionnaires", "dictionnaries", "mots", "définitions", "mot", "définition", "definitions", "definiton"],
+          "name": "Dictionaries"
+      },
+      {
+          "aliases": ["document", "documentation", "doc"],
+          "name": "Document"
+      },
+      {
+          "aliases": ["repas", "nourriture", "manger", "food", "cuisine"],
+          "name": "Food"
+      },
+      {
+          "aliases": ["jeu", "jeu vidéo", "jeux-vidéo", "jeux-vidéos", "jeu video", "jeu-video"],
+          "name": "Game"
+      },
+      {
+          "aliases": ["geocoding", "geographie", "géographie", "location"],
+          "name": "Geocoding"
+      },
+      {
+          "aliases": ["gouvernement", "gouvernements", "politique"],
+          "name": "Governement"
+      },
+      {
+          "aliases": ["santé", "sain"],
+          "name": "Health"
+      },
+      {
+          "aliases": ["job", "travail", "travaux"],
+          "name": "Job"
+      },
+      {
+          "aliases": ["machine learning"],
+          "name": "Machine Learning"
+      },
+      {
+          "aliases": ["musique", "music", "chanson", "son", "song"],
+          "name": "Music"
+      },
+      {
+          "aliases": ["news", "new", "actualité", "actualités", "actualite", "actualites"],
+          "name": "News"
+      },
+      {
+          "aliases": ["open data"],
+          "name": "Open Data"
+      },
+      {
+          "aliases": ["projets", "projet", "open source", "open-source"],
+          "name": "Open Source"
+      },
+      {
+          "aliases": ["personnalité", "personnality", "personnalite"],
+          "name": "Personnality"
+      },
+      {
+          "aliases": ["photography", "photographie", "photo", "photos"],
+          "name": "Photography"
+      },
+      {
+          "aliases": ["sciences", "physique", "chimie", "biologie", "science"],
+          "name": "Sciences"
+      },
+      {
+          "aliases": ["math", "maths", "mathématiques", "mathématique"],
+          "name": "Math"
+      },
+      {
+          "aliases": ["sécurité", "securité", "security"],
+          "name": "Security"
+      },
+      {
+          "aliases": ["shopping", "course", "courses"],
+          "name": "Shopping"
+      },
+      {
+          "aliases": ["social"],
+          "name": "Social"
+      },
+      {
+          "aliases": ["sports", "football", "basketball", "baseball", "formule 1", "tennis"],
+          "name": "Sports"
+      },
+      {
+          "aliases": ["test data"],
+          "name": "Test data"
+      },
+      {
+          "aliases": ["test analysis"],
+          "name": "Test Analysis"
+      },
+      {
+          "aliases": ["tracing"],
+          "name": "Tracking"
+      },
+      {
+          "aliases": ["url", "court", "url shortener"],
+          "name": "URL Shortener"
+      },
+      {
+          "aliases": ["voiture", "camion", "voitures", "camions", "moto", "motos"],
+          "name": "Vehicle"
+      },
+      {
+          "aliases": ["video", "videos", "vidéos", "vidéo"],
+          "name": "Video"
+      },
+      {
+          "aliases": ["météo", "meteo", "méteo", "metéo", "temps", "soleil", "pluie", "weather"],
+          "name": "Weather"
+      }]
+  }
